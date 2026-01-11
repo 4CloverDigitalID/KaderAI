@@ -1,35 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { createSession } from './api/chat'
+import Sidebar from './components/Layout/Sidebar'
+import ChatPage from './pages/Chat/ChatPage'
+import SchedulesPage from './pages/Schedules/SchedulesPage'
+import VisitsPage from './pages/Visits/VisitsPage'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [activeTab, setActiveTab] = useState('visits')
+  const [chatPresetSession, setChatPresetSession] = useState(null)
+  const [notice, setNotice] = useState('')
+
+  const handleStartChat = async (schedule) => {
+    try {
+      const session = await createSession({
+        title: `Chat Jadwal ${schedule.date_label}`,
+        schedule_id: schedule.id,
+      })
+      setChatPresetSession(session)
+      setActiveTab('chat')
+      setNotice('')
+    } catch (err) {
+      setNotice(err.message)
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-shell">
+      <Sidebar active={activeTab} onSelect={setActiveTab} />
+      <main className="main">
+        {notice && <div className="notice">{notice}</div>}
+        {activeTab === 'visits' && <VisitsPage />}
+        {activeTab === 'schedules' && <SchedulesPage onStartChat={handleStartChat} />}
+        {activeTab === 'chat' && <ChatPage presetSession={chatPresetSession} />}
+      </main>
+    </div>
   )
 }
-
-export default App
