@@ -31,7 +31,7 @@ export default function Hero() {
             </p>
 
             {/* ICON IMAGE */}
-            <div className="items-center gap-6 rounded-xl p-5 inline-flex mb-8 bg-linear-to-r from-[#14c6c0] to-[#1F4E79]">
+            <div className="items-center gap-6 rounded-2xl px-8 py-4 inline-flex mb-8 bg-linear-to-r from-[#14c6c0] to-[#1F4E79]">
               <img src="img/img1.png" alt="" />
               <img src="img/img2.png" alt="" />
               <img src="img/img3.png" alt="" />

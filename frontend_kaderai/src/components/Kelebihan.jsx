@@ -8,22 +8,74 @@ const Kelebihan = () => {
   return (
     <div className='flex flex-col justify-center items-center p-30'>
         <div>
-            <h1 className='text-4xl font-bold bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] bg-clip-text text-transparent'>Kenapa KaderAI Dibutuhkan?</h1>
+            <h1 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }} className='text-4xl font-bold bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] bg-clip-text text-transparent'>Kenapa KaderAI Dibutuhkan?</h1>
             <div className='bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] w-full h-[3px] rounded-sm mt-2'></div>
         </div>
         <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }} className='flex flex-row gap-8 items-center mt-5'>
-            <div className='flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-xl'>
-                <img className='w-45 h-45' src="img/Kebutuhan1.png" alt="" />
-                <h3 className='text-xl font-semibold text-center'>Edukasi gizi sering <br /> tidak konsisten</h3>
+
+            {/* card 1 */}
+            <div className='group relative flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-lg overflow-hidden'>
+                
+                <div className='flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0'>
+                    <img className='w-45 h-45' src="img/Kebutuhan1.png" alt="" />
+                    <h3 className='text-xl font-semibold text-center'>
+                    Edukasi gizi sering <br /> tidak konsisten
+                    </h3>
+                </div>
+
+                <div className='absolute inset-0 flex flex-col justify-center items-center text-center px-6 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100'>
+                    <img className='w-32 mb-4' src="img/Kebutuhan1.png" alt="" />
+                    <h3 className='text-lg font-semibold mb-2'>
+                        Edukasi gizi sering tidak konsisten
+                    </h3>
+                    <p className='text-sm text-[#6B7280] leading-relaxed'>
+                        Edukasi gizi yang diberikan sering berbeda antar kader dan antar kunjungan. Tanpa panduan yang terstandar, pesan yang diterima orang tua bisa berubah-ubah, sehingga sulit dipahami dan kurang efektif untuk diterapkan secara berkelanjutan di rumah.
+                    </p>
+                </div>
             </div>
-            <div className='flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-xl'>
-                <img src="img/Kebutuhan2.png" alt="" />
-                <h3 className='text-xl font-semibold text-center'>Edukasi gizi sering <br /> tidak konsisten</h3>
+
+            {/* card 2 */}
+            <div className='group relative flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-lg overflow-hidden'>
+                
+                <div className='flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0'>
+                    <img className='w-45 h-45' src="img/Kebutuhan2.png" alt="" />
+                    <h3 className='text-xl font-semibold text-center'>
+                    Laporan kunjungan <br /> makan waktu
+                    </h3>
+                </div>
+
+                <div className='absolute inset-0 flex flex-col justify-center items-center text-center px-6 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100'>
+                    <img className='w-32 mb-4' src="img/Kebutuhan2.png" alt="" />
+                    <h3 className='text-lg font-semibold mb-2'>
+                        Laporan kunjungan <br /> makan waktu
+                    </h3>
+                    <p className='text-sm text-[#6B7280] leading-relaxed'>
+                        Edukasi gizi yang diberikan sering berbeda antar kader dan antar kunjungan. Tanpa panduan yang terstandar, pesan yang diterima orang tua bisa berubah-ubah, sehingga sulit dipahami dan kurang efektif untuk diterapkan secara berkelanjutan di rumah.
+                    </p>
+                </div>
             </div>
-            <div className='flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-xl'>
-                <img src="img/Kebutuhan3.png" alt="" />
-                <h3 className='text-xl font-semibold text-center'>Edukasi gizi sering <br /> tidak konsisten</h3>
+
+            {/* card 3 */}
+            <div className='group relative flex flex-col gap-4 text-[#1F4E79] justify-center items-center mt-10 border-3 border-[#0FA6A0] px-6 py-9 rounded-xl shadow-lg overflow-hidden'>
+                
+                <div className='flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0'>
+                    <img className='w-45 h-45' src="img/Kebutuhan3.png" alt="" />
+                    <h3 className='text-xl font-semibold text-center'>
+                    Rujukan risiko tinggi <br /> sering telat
+                    </h3>
+                </div>
+
+                <div className='absolute inset-0 flex flex-col justify-center items-center text-center px-6 bg-white transition-all duration-300 opacity-0 group-hover:opacity-100'>
+                    <img className='w-32 mb-4' src="img/Kebutuhan3.png" alt="" />
+                    <h3 className='text-lg font-semibold mb-2'>
+                        Rujukan risiko tinggi <br /> sering telat
+                    </h3>
+                    <p className='text-sm text-[#6B7280] leading-relaxed'>
+                        Edukasi gizi yang diberikan sering berbeda antar kader dan antar kunjungan. Tanpa panduan yang terstandar, pesan yang diterima orang tua bisa berubah-ubah, sehingga sulit dipahami dan kurang efektif untuk diterapkan secara berkelanjutan di rumah.
+                    </p>
+                </div>
             </div>
+            
         </div>
     </div>
   )
