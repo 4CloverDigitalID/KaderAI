@@ -6,7 +6,7 @@ import '@fontsource/plus-jakarta-sans/700.css'
 
 const Kelebihan = () => {
   return (
-    <div className='flex flex-col justify-center items-center p-30'>
+    <div  className='flex flex-col justify-center items-center pt-15 sm:pt-20 md:pt-30'>
         <div>
             <h1 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }} className='text-4xl font-bold bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] bg-clip-text text-transparent'>Kenapa KaderAI Dibutuhkan?</h1>
             <div className='bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] w-full h-[3px] rounded-sm mt-2'></div>

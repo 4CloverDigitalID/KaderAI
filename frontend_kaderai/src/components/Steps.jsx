@@ -26,7 +26,7 @@ const Steps = () => {
   ];
 
   return (
-    <div className=" flex items-center justify-center p-8 mt-20">
+    <div className=" flex items-center justify-center p-8 mt-15 sm:mt-20 md:mt-25 xl:mt-40">
       <div style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }} className="max-w-3xl w-full">
         <div className='flex flex-col items-center mb-10'>
             <h1 className='text-4xl font-bold bg-linear-to-r from-[#0FA6A0] justify-start flex to-[#1F4E79] bg-clip-text text-transparent'>Bagaimana Ini Bekerja</h1>
